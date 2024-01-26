@@ -55,6 +55,10 @@ address {
   font-style: normal;
 }
 
+footer {
+  background-color: var(--color-primary-dark);
+}
+
 ul {
   list-style-type: none;
 }
@@ -85,6 +89,10 @@ ul {
 .header-link:hover {
   color: var(--color-primary-blue);
   font-weight: 700;
+}
+
+.link-icons {
+  text-decoration: none;
 }
 /* Hero-section */
 .hero-title {
@@ -162,11 +170,21 @@ ul {
   font-size: 16px;
 }
 
+.footer-link:hover {
+  color: var(--color-primary-blue);
+  font-weight: 700;
+}
+
 .adress-link {
   color: var(--color-primary-light);
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
+}
+
+.adress-link:hover {
+  color: var(--color-primary-blue);
+  font-weight: 700;
 }
 
 .copyright {
