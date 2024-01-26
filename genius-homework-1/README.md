@@ -1,1 +1,0 @@
-BEAUTY ZONE project
