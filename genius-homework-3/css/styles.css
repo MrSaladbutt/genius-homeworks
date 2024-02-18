@@ -83,6 +83,15 @@ a {
   display: inline-block;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 *,
 *::after,
 *::before {
@@ -106,6 +115,11 @@ p {
   padding: 0 24px;
 }
 
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+}
+
 /* Button */
 
 .button {
@@ -119,7 +133,7 @@ p {
   font-size: 18px;
   font-weight: 600;
   font-family: Roboto, sans-serif;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
 }
 
 .button:hover {
@@ -170,7 +184,7 @@ p {
   font-size: 18px;
   font-weight: 400;
   flex-wrap: wrap;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.2s, text-shadow 0.2s;
 }
 
 .header-link:hover {
@@ -186,7 +200,7 @@ p {
 
 .header-icons {
   fill: var(--color-primary-dark);
-  transition: fill 0.3s;
+  transition: fill 0.2s;
 }
 
 .header-icons:hover {
@@ -334,22 +348,22 @@ p {
   top: 269.5px;
   right: 6px;
   fill: var(--color-secondary-light);
-  animation: scale-yellow 2s infinite;
+  animation: scale-yellow 3s infinite;
 }
 
 @keyframes scale-yellow {
   0% {
-    transform: scale(1);
+    transform: scale(1) rotate(0);
     fill: var(--color-secondary-light);
   }
 
   50% {
-    transform: scale(1.5);
+    transform: scale(1.5) rotate(1turn);
     fill: var(--color-secondary-yellow);
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(1) rotate(2turn);
     fill: var(--color-secondary-light);
   }
 }
@@ -450,6 +464,10 @@ p {
   align-items: center;
 }
 
+.procedures-section {
+  margin: 96px 0;
+}
+
 .procedures-list {
   flex-shrink: 0;
   flex-grow: 1;
@@ -465,7 +483,7 @@ p {
   flex-basis: calc((100% - 32px) / 3);
   border-radius: 4px 120px;
   height: 456px;
-  transition: transform 0.3s;
+  transition: transform 0.2s;
 }
 
 .procedures-items.left {
@@ -505,10 +523,6 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-}
-
-.procedures-section {
-  margin: 96px 0;
 }
 
 .procedures-items:hover {
@@ -552,12 +566,14 @@ p {
   background-color: transparent;
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
 }
 
 .carousel-button:hover {
   background-color: var(--color-primary-blue);
   fill: var(--color-primary-light);
+  border: 0.77px solid rgb(255, 255, 255);
+  backdrop-filter: blur(15.36px);
 }
 
 .carousel-button.next {
@@ -601,6 +617,11 @@ p {
 
 .form-text .contacts-accent {
   color: var(--color-primary-blue);
+}
+
+.form-field.contacts-section-form {
+  min-width: 310px;
+  margin-bottom: 16px;
 }
 
 .contacts-map {
@@ -669,7 +690,7 @@ p {
 
 .address-icon {
   fill: var(--color-primary-light);
-  transition: fill 0.3s;
+  transition: fill 0.2s;
 }
 
 .address-icon:hover {
@@ -686,7 +707,7 @@ p {
   text-decoration: none;
   font-size: 16px;
   line-height: 1.18;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.2s, text-shadow 0.2s;
 }
 
 .footer-link:hover {
@@ -700,7 +721,7 @@ p {
   line-height: 1.18;
   font-weight: 400;
   text-decoration: none;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.2s, text-shadow 0.2s;
 }
 
 .adress-link:hover {
@@ -730,6 +751,7 @@ p {
 
 .backdrop {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -739,7 +761,7 @@ p {
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.2s, visibility 0.2s;
 }
 
 .backdrop.is-hidden {
@@ -751,29 +773,33 @@ p {
 .modal {
   position: relative;
   width: 100%;
-  height: 100%;
   max-width: 723px;
+  height: 100%;
   max-height: 681px;
-  background-color: var(--color-primary-dark);
+  background: url(../images/modal-bcg.png), var(--color-primary-dark);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 48px;
   color: var(--color-primary-light);
+  overflow-y: auto;
 }
 
 .modal-btn-close {
   position: absolute;
   top: 42px;
   right: 42px;
-}
-
-.modal-content {
-  padding: 42px 144px;
+  background-color: transparent;
+  fill: rgba(0, 0, 0, 0);
+  stroke: var(--color-primary-light);
+  border: none;
+  cursor: pointer;
 }
 
 .modal-content {
   display: flex;
   flex-direction: column;
   padding: 42px 144px;
-  gap: 40px;
 }
 
 .modal-title {
@@ -782,15 +808,80 @@ p {
   font-weight: 700;
   line-height: 1.16;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 
 .modal-text {
+  margin-bottom: 0;
   font-weight: 600;
   line-height: 1.18;
   text-align: center;
+  margin-bottom: 32px;
 }
 
 .modal-text .accent {
   color: var(--color-primary-blue);
+}
+
+/* Form */
+
+.modal-form {
+  width: 100%;
+  max-width: 310px;
+  margin: 0 auto;
+}
+
+.form-field {
+  width: 100%;
+  max-width: 310px;
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  color: var(--color-primary-light);
+}
+
+.form-input {
+  padding: 18px 32.85px;
+  width: 100%;
+  border: 2px solid var(--color-secondary-light);
+  border-radius: 32px;
+  background-color: transparent;
+  color: var(--color-primary-light);
+  font-size: 13px;
+  line-height: 1.15;
+  text-align: left;
+  transition-duration: 0.2s;
+}
+
+.form-input::placeholder {
+  color: var(--color-primary-light);
+  font-size: 13px;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.form-input:focus {
+  background-color: var(--color-secondary-light);
+  outline: none;
+}
+
+.form-button {
+  display: block;
+  margin: 0 auto 8px;
+}
+
+.form-button:hover {
+  color: var(--color-primary-light);
+}
+
+.modal-description {
+  margin: 0 auto;
+  max-width: 213px;
+  color: var(--color-secondary-light);
+}
+
+.description-link {
+  color: var(--color-secondary-light);
 }
