@@ -1,0 +1,30 @@
+.procedures-cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  border-radius: 4px 120px;
+  height: 456px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(1, 28, 68, 0) 48.529%,
+    rgba(1, 28, 68, 0.73) 84.641%,
+    rgb(1, 28, 68) 101.43%
+  );
+  transition: transform 0.2s;
+  overflow: hidden;
+}
+
+.procedures-cards:hover {
+  transform: scale(1.05);
+}
+
+.procedure-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

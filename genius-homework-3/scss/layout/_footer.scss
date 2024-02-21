@@ -1,0 +1,112 @@
+.footer {
+  position: relative;
+  padding: 56px 0;
+  overflow: hidden;
+  background-image: url(../images/footer-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-primary-dark);
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}
+
+.footer-logo,
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.address-items,
+.address-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.address-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+  flex-basis: 50%;
+  flex-wrap: wrap;
+}
+
+.address-items {
+  flex-basis: 50%;
+}
+
+.address-icon {
+  fill: var(--color-primary-light);
+  transition: fill 0.2s;
+}
+
+.address-icon:hover {
+  fill: var(--color-primary-blue);
+}
+
+.footer-icons {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-link {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.18;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--color-primary-blue);
+  text-shadow: 1px 0px var(--color-primary-blue);
+}
+
+.address-link {
+  color: var(--color-primary-light);
+  font-size: 16px;
+  line-height: 1.18;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.address-link:hover {
+  color: var(--color-primary-blue);
+  text-shadow: 1px 0px var(--color-primary-blue);
+}
+
+.footer::after {
+  position: absolute;
+  top: 126px;
+  right: -31px;
+  content: '';
+  background-image: url(../images/cosmetic-bottles.png);
+  width: 278px;
+  height: 213px;
+  background-size: 100%;
+  background-position: right bottom;
+}

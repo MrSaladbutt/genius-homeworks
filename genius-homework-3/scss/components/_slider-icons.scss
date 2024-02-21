@@ -1,0 +1,11 @@
+.slider-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 32px;
+}
+
+.slider-circle {
+  max-width: 11px;
+  fill: var(--color-secondary-light);
+}
