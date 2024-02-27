@@ -20,8 +20,13 @@
   &__nav {
     display: flex;
     align-items: center;
-    gap: 240px;
     flex-wrap: wrap;
+    gap: 240px;
+    flex-grow: 1;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 40px;
+    }
   }
 
   &__nav > :not(:last-child) {
