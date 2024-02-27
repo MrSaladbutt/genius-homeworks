@@ -1,22 +1,26 @@
 @import './utils/fonts';
 @import './utils/variables';
 @import './base';
+@import './utils/animations';
 @import './utils/texts';
 @import './utils/utils';
 
 @import './components/buttons';
-@import './components/procedures-cards';
-@import './components/slider-icons';
 @import './components/carousel-buttons';
 @import './components/input';
+@import './components/procedures-cards';
+@import './components/pagination';
 
-@import './layout/container';
-@import './layout/wrapper';
-@import './layout/header';
-@import './layout/hero-section';
 @import './layout/about-us-section';
 @import './layout/advantages-section';
-@import './layout/procedures-section';
+@import './layout/container';
 @import './layout/contacts-section';
 @import './layout/footer';
+@import './layout/header';
+@import './layout/hero-section';
 @import './layout/modal';
+@import './layout/modal-descriptions';
+@import './layout/mobile-menu';
+@import './layout/procedures-section';
+@import './layout/section';
+@import './layout/wrapper';

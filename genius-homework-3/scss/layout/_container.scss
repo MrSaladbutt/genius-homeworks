@@ -9,5 +9,9 @@
   background-image: url(../images/wave-background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center -25px;
+
+  @media screen and (min-width: $bp-tablet) {
+    background-position: center top;
+  }
 }

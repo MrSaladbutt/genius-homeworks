@@ -1,49 +1,101 @@
 .contacts-section {
-  margin: 96px 0;
-}
+  margin: 0 auto;
 
-.contacts-container {
-  display: flex;
-  gap: 32px;
-  justify-content: center;
-}
+  @media screen and (min-width: $bp-tablet) {
+    margin: 96px 0;
+  }
 
-.contacts-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 48px 56px;
-  border-radius: 32px;
-  background-color: var(--color-primary-dark);
-  background-image: url(../images/contact-form-background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  width: 422px;
-  height: 482px;
-}
+  &__container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-direction: column-reverse;
 
-.form-text {
-  color: var(--color-primary-light);
-  font-weight: 600;
-  line-height: 1.18;
-  text-align: center;
-}
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 32px;
+    }
+  }
 
-.form-text .contacts-accent {
-  color: var(--color-primary-blue);
-}
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
 
-.form-field.contacts-section-form {
-  min-width: 310px;
-  margin-bottom: 16px;
-}
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 48px;
+    }
+  }
 
-.contacts-map {
-  flex-shrink: 0;
-  border-radius: 32px;
-  width: 100%;
-  max-width: 605px;
-  border: transparent;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 42px 24px;
+    border-radius: 24px;
+    background-color: var(--color-primary-dark);
+    background-image: url(../images/contact-form-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    width: 320px;
+    align-self: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 48px 56px;
+      border-radius: 32px;
+      width: 422px;
+      height: 482px;
+    }
+  }
+
+  &__map {
+    flex-shrink: 0;
+    margin: 0 -24px;
+    height: 232px;
+    border: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 320px;
+      height: 481px;
+      border-radius: 32px;
+      margin: auto 0;
+
+      @media screen and (min-width: $bp-desktop) {
+        width: 605px;
+        height: 481px;
+      }
+    }
+  }
+
+  &__text {
+    color: var(--color-primary-light);
+    font-weight: 600;
+    line-height: 1.18;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__form-field {
+    min-width: 241px;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+      min-width: 310px;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto 8px;
+
+    &:hover {
+      color: var(--color-primary-light);
+    }
+  }
 }
