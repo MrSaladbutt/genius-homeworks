@@ -15,14 +15,12 @@
   &__container {
     display: flex;
     align-items: center;
-    gap: 40px;
   }
 
   &__nav {
     display: flex;
-    flex-grow: 1;
     align-items: center;
-    gap: 40px;
+    gap: 240px;
     flex-wrap: wrap;
   }
 
