@@ -7,14 +7,10 @@
   background-color: var(--color-primary-light);
   transform: translateX(100%);
   transition: transform 0.2s;
-  opacity: 0;
-  visibility: hidden;
   z-index: 2;
   padding: 16px 20px;
 
   &.is-open {
-    opacity: 1;
-    visibility: visible;
     transform: translate(0);
   }
 

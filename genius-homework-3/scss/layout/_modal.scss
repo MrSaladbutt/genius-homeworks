@@ -24,7 +24,7 @@
   width: 100%;
   max-width: 723px;
   height: 100%;
-  max-height: 681px;
+  max-height: 450px;
   background: url(../images/modal-bcg.png), var(--color-primary-dark);
   background-position: left top;
   background-repeat: no-repeat;
@@ -38,6 +38,7 @@
   @media screen and (min-width: $bp-tablet) {
     padding: 42px 144px;
     margin: 0 auto;
+    max-height: 681px;
   }
 
   &__content {
