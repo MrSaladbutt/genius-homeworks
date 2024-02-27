@@ -1,0 +1,208 @@
+.footer {
+  position: relative;
+  padding: 56px 0;
+  overflow: hidden;
+  background-image: url(../images/footer-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-primary-dark);
+
+  &::after {
+    position: absolute;
+    top: 126px;
+    right: -31px;
+    content: '';
+    background-image: url(../images/cosmetic-bottles.png);
+    width: 278px;
+    height: 213px;
+    background-size: 100%;
+    background-position: right bottom;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  &__nav,
+  &__address {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      flex-basis: 50%;
+      align-items: flex-start;
+    }
+  }
+
+  &__nav {
+    gap: 42px;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 20px;
+    }
+  }
+
+  &__address {
+    gap: 8px;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 20px;
+    }
+  }
+
+  &__logo,
+  &__nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $bp-desktop) {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &__address-items,
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+  }
+
+  &__address-container {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex-grow: 1;
+      flex-basis: 50%;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__address-items {
+    flex-basis: 50%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 316px;
+    width: 100%;
+    align-items: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      align-items: flex-start;
+    }
+  }
+
+  &__address-icon {
+    fill: var(--color-primary-light);
+    transition: fill 0.2s;
+
+    &:hover {
+      fill: var(--color-primary-blue);
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 24px;
+    }
+  }
+
+  &__link {
+    color: var(--color-primary-light);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.14;
+    transition: color 0.2s, text-shadow 0.2s;
+
+    &:hover {
+      color: var(--color-primary-blue);
+      text-shadow: 1px 0px var(--color-primary-blue);
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 16px;
+      line-height: 1.18;
+    }
+  }
+
+  &__address-link {
+    color: var(--color-primary-light);
+    font-size: 16px;
+    line-height: 1.18;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s, text-shadow 0.2s;
+    display: none;
+    text-align: center;
+
+    &:hover {
+      color: var(--color-primary-blue);
+      text-shadow: 1px 0px var(--color-primary-blue);
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+      text-align: left;
+    }
+
+    &--mobile {
+      color: var(--color-primary-light);
+      font-size: 14px;
+      line-height: 1.14;
+      font-weight: 400;
+      text-decoration: none;
+      transition: color 0.2s, text-shadow 0.2s;
+
+      &:hover {
+        color: var(--color-primary-blue);
+        text-shadow: 1px 0px var(--color-primary-blue);
+      }
+
+      @media screen and (min-width: $bp-desktop) {
+        display: none;
+        font-size: 16px;
+        line-height: 1.18;
+      }
+    }
+  }
+
+  &__mobile-private-policy {
+    text-align: center;
+  }
+}
